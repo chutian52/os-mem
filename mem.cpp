@@ -8,6 +8,7 @@
 int main(int argc,char **argv)
 {
     long size = sysconf(_SC_PAGE_SIZE) * sysconf(_SC_PHYS_PAGES);
+    size = size >> 30;
     std::cout << size << std:: endl;
     return 0;
 }
